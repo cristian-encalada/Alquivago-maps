@@ -192,7 +192,7 @@ async function initMap2(centerCoordinates, zoneNumber) {
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker"); // Import AdvancedMarkerElement
   const map = new Map(document.getElementById("map"), {
     center: centerCoordinates,
-    zoom: 14,
+    zoom: 15,
     mapId: "16aaecb986532f9a",
   });
 
@@ -289,7 +289,7 @@ async function initMap2(centerCoordinates, zoneNumber) {
     });
     markers.length = 0; // Clear the markers array
 
-    if (zoom >= 14) {
+    if (zoom >= 15) {
       if (allRentsData && allRentsData.rents) {
         allRentsData.rents.forEach((rent) => {
           if (rent.location && rent.location.latitude && rent.location.longitude) {
@@ -322,7 +322,7 @@ async function initMap2(centerCoordinates, zoneNumber) {
           }
         });
       }
-    } else if (zoom < 14) {
+    } else if (zoom < 15) {
       if (allRentsData && allRentsData.rents) {
         allRentsData.rents.forEach((rent) => {
           if (rent.location && rent.location.latitude && rent.location.longitude) {
